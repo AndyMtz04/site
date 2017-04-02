@@ -8,5 +8,4 @@ __pycache__/
 django35
 mysite
 manage.py
-start.py
-nginx.conf
+server

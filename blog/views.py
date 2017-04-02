@@ -1,9 +1,11 @@
 from django.shortcuts import render
-from .models import Post, Project, About
+from .models import Post, Project, About, FrontPage
 
 
 def index(request):
-    return render(request, 'index.html')
+    front = FrontPage.objects.first()
+    projects = Project.objects.all()[:3]
+    return render(request, 'index.html', {'projects': projects, 'front': front})
 
 
 def blog(request):

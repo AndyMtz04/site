@@ -4,10 +4,14 @@
 
 <div class="container">
     <h1 class="blog-title">Projects</h1><hr>
-    {% for post in posts %}
-    <h3>{{ post }}</h3>
-    {{ post.text }}
-    {% endfor %}
+    <div class="col-md-9">
+        {% for post in posts %}
+            <h3>{{ post }}</h3>
+            {{ post.text|linebreaks }}
+            <p><a class="btn btn-primary" href={{ post.github }}>Source Code</a></p>
+            <br><hr>
+        {% endfor %}
+    </div>
 </div>
 
 {% endblock %}

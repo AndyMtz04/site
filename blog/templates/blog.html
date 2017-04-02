@@ -3,8 +3,8 @@
 {% block content %}
 
 <div class="container">
-    <div class="blog-title">
-        <h1>Blog</h1><hr>
+    <h1 class="blog-title">Blog</h1><hr>
+    <div class="col-md-9">
         {% for post in posts %}
             <h3 class="blog-tittle">{{ post.title }}</h3>
             <p class="blog-post-meta">{{ post.created_date }}</p><br>

@@ -2,11 +2,22 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container-fluid">
     <div class="jumbotron">
-    <h1 class="Jumbotron heading">Welcome!</h1>
-        <p>You have landed on Andy's site.</p>
+        <h1 class="text-center">{{ front }}</h1>
     </div>
-
 </div>
+
+<div class="container">
+    <div class="top-buffer">
+        {% for project in projects %}
+            <div class="col-md-4">
+                <h3>{{ project }}</h3>
+                <p>{{ project.text|truncatechars:100 }}</p>
+                <p><a class="btn btn-primary" href={{ project.github }}>Source Code</a></p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
 {% endblock %}
