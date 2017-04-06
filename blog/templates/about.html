@@ -3,14 +3,13 @@
 {% block content %}
 
 <div class="container">
-    <h1 class="blog-title">About</h1><hr>
+    <h1>About</h1><hr>
     <div class="col-md-9">
         {% for post in posts %}
-            {{ post.text|linebreaks }}
-            <br>
+            <p>{{ post.text|linebreaks }}</p>
             <p><strong>Email: </strong>{{ post.email }}</p>
-            <p><a class="btn btn-primary" href={{ post.linkedin }}>linkedin</a></p>
-            <p><a class="btn btn-primary" href={{ post.github }}>GitHub</a></p>
+            <p><a class="btn btn-primary btn-sm" href={{ post.linkedin }}>LinkedIn</a></p>
+            <p><a class="btn btn-primary btn-sm" href={{ post.github }}>GitHub</a></p>
         {% endfor %}
     </div>
 </div>

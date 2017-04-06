@@ -3,12 +3,12 @@
 {% block content %}
 
 <div class="container">
-    <h1 class="blog-title">Projects</h1><hr>
+    <h1>Projects</h1><hr>
     <div class="col-md-9">
         {% for post in posts %}
             <h3>{{ post }}</h3>
-            {{ post.text|linebreaks }}
-            <p><a class="btn btn-primary" href={{ post.github }}>Source Code</a></p>
+            <p>{{ post.text|linebreaks }}</p>
+            <p><a class="btn btn-primary btn-sm" href={{ post.github }}>Source Code</a></p>
             <br><hr>
         {% endfor %}
     </div>

@@ -3,12 +3,12 @@
 {% block content %}
 
 <div class="container">
-    <h1 class="blog-title">Blog</h1><hr>
+    <h1>Blog</h1><hr>
     <div class="col-md-9">
         {% for post in posts %}
-            <h3 class="blog-tittle">{{ post.title }}</h3>
-            <p class="blog-post-meta">{{ post.created_date }}</p><br>
-            {{ post.text|linebreaks }}<br><hr>
+            <h3>{{ post.title }}</h3>
+            <p class="blog-post-meta">{{ post.created_date }}</p>
+            <p>{{ post.text|linebreaks }}</p><br><hr>
         {% endfor %}
     </div>
 </div>
