@@ -13,7 +13,7 @@
         {% for project in projects %}
             <div class="col-md-4">
                 <h3>{{ project }}</h3>
-                <p>{{ project.text|truncatechars:100 }}</p>
+                <p>{{ project.text|truncatechars:200 }}</p>
                 <p><a class="btn btn-primary btn-sm" href={{ project.github }}>Source Code</a></p>
             </div>
         {% endfor %}

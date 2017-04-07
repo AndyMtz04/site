@@ -1,17 +1,17 @@
 from django.shortcuts import render
-from .models import Post, Project, About, FrontPage
+from .models import Project, About, FrontPage, FrontPageProject
 
 
 def index(request):
     front = FrontPage.objects.first()
-    projects = Project.objects.all()[:3]
+    projects = FrontPageProject.objects.all()
     return render(request, 'index.html', {'projects': projects, 'front': front})
 
 
-def blog(request):
-    active = 'blog'
-    posts = Post.objects.all()
-    return render(request, 'blog.html', {'posts': posts, 'active': active})
+#def blog(request):
+#    active = 'blog'
+#    posts = Post.objects.all()
+#    return render(request, 'blog.html', {'posts': posts, 'active': active})
 
 
 def projects(request):
