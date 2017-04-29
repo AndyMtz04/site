@@ -4,7 +4,7 @@ from .models import Project, About, FrontPage
 
 def index(request):
     front = FrontPage.objects.first()
-    projects = Project.objects.all().order_by("created_date")[:3]
+    projects = Project.objects.all().order_by("-created_date")[:3]
     return render(request, 'index.html', {'projects': projects, 'front': front})
 
 

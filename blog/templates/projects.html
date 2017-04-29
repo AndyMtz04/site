@@ -6,10 +6,10 @@
     <h1>Projects</h1><hr>
     <div class="col-md-9">
         {% for post in posts %}
-            <h3>{{ post }}</h3>
-            <p>{{ post.text|linebreaks }}</p>
-            <p><a class="btn btn-primary btn-sm" href={{ post.github }}>Source Code</a></p>
-            <br><hr>
+        <h3>{{ post }}</h3>
+        {{ post.text|linebreaks }}
+        <p><a class="btn btn-primary btn-sm" href={{ post.github }}>Source Code</a></p>
+        <br><hr>
         {% endfor %}
     </div>
 </div>
