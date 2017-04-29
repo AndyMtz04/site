@@ -16,7 +16,7 @@ def index(request):
 
 def projects(request):
     active = 'projects'
-    posts = Project.objects.all()
+    posts = Project.objects.all().order_by("created_date")
     return render(request, 'projects.html', {'posts': posts, 'active': active})
 
 
