@@ -42,15 +42,3 @@ class FrontPage(models.Model):
 
     def __str__(self):
         return self.title
-
-
-class FrontPageProject(models.Model):
-    author = models.ForeignKey('auth.User')
-    title = models.CharField(max_length=200)
-    text = models.TextField()
-    github = models.CharField(max_length=200, default="default")
-    created_date = models.DateTimeField(
-            default=timezone.now)
-
-    def __str__(self):
-        return self.title

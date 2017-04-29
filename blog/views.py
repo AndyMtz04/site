@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from .models import Project, About, FrontPage, FrontPageProject
+from .models import Project, About, FrontPage
 
 
 def index(request):
     front = FrontPage.objects.first()
-    projects = FrontPageProject.objects.all()
+    projects = Project.objects.all().order_by("created_date")[:3]
     return render(request, 'index.html', {'projects': projects, 'front': front})
 
 
@@ -16,7 +16,7 @@ def index(request):
 
 def projects(request):
     active = 'projects'
-    posts = Project.objects.all().order_by("created_date")
+    posts = Project.objects.all().order_by("-created_date")
     return render(request, 'projects.html', {'posts': posts, 'active': active})
 
 
