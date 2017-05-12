@@ -5,7 +5,14 @@ __pycache__/
 *.pot
 .git
 .idea
-django35
+.dockerignore
+django3*
 mysite
 manage.py
 server
+Dockerfile
+db
+nginx
+start.py
+docker-compose.yml
+
