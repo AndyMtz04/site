@@ -9,6 +9,8 @@ body {
 .jumbotron {
     background-color: white;
 }
-.blog-post-meta {
-    color: grey;
+#btnCode,
+#btnMore{
+    display: inline-block;
+    vertical-align: top;
 }

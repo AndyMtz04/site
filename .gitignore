@@ -10,9 +10,5 @@ django3*
 mysite
 manage.py
 server
-Dockerfile
-db
-nginx
-start.py
-docker-compose.yml
+docker
 

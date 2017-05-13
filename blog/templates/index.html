@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
-
 {% block content %}
-
 <div class="container-fluid">
     <div class="jumbotron">
         <h1 class="text-center">{{ front }}</h1>
@@ -13,11 +11,13 @@
         {% for project in projects %}
         <div class="col-md-4">
             <h3>{{ project }}</h3>
-            <p>{{ project.text|truncatechars:200 }}</p>
-            <p><a class="btn btn-primary btn-sm" href={{ project.github }}>Source Code</a></p>
+            <p>{{ project.text|truncatechars:250 }}</p>
+            <a href="{{ project.github }}"><button id="btnCode" class="btn btn-primary btn-sm">Source Code</button></a>
+            <!--
+            <a href="/project/{{ project.id }}"><button id="btnMore" class="btn btn-primary btn-sm">Description</button></a>
+            -->
         </div>
         {% endfor %}
     </div>
 </div>
-
 {% endblock %}
