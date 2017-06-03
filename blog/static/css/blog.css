@@ -9,8 +9,3 @@ body {
 .jumbotron {
     background-color: white;
 }
-#btnCode,
-#btnMore{
-    display: inline-block;
-    vertical-align: top;
-}

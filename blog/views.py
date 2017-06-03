@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from .models import Project, About, FrontPage
 
 
@@ -7,12 +7,6 @@ def index(request):
     front = FrontPage.objects.first()
     projects = Project.objects.all().order_by("-created_date")[:3]
     return render(request, 'index.html', {'projects': projects, 'front': front, 'active': active})
-
-
-#def blog(request):
-#    active = 'blog'
-#    posts = Post.objects.all()
-#    return render(request, 'blog.html', {'posts': posts, 'active': active})
 
 
 def projects(request):
@@ -27,6 +21,11 @@ def about(request):
     return render(request, 'about.html', {'posts': posts, 'active': active})
 
 
-#def project(request, pk):
-#    project = get_object_or_404(Project, pk=pk)
-#    return render(request, 'project.html', {'project': project})
+#def test(request):
+#    return render(request, 'test.html')
+
+
+# def blog(request):
+#    active = 'blog'
+#    posts = Post.objects.all()
+#    return render(request, 'blog.html', {'posts': posts, 'active': active})
