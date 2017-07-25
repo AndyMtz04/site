@@ -21,10 +21,6 @@ def about(request):
     return render(request, 'about.html', {'posts': posts, 'active': active})
 
 
-#def test(request):
-#    return render(request, 'test.html')
-
-
 # def blog(request):
 #    active = 'blog'
 #    posts = Post.objects.all()
