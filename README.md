@@ -1,3 +1,5 @@
 # Site
 
-Personal website created to learn web development and to display coding projects.
+Personal portfolio website utilizes the Django web framework, PostgreSQL database, Docker containers, CentOS server, and the Google Cloud Platform
+
+www.AndyMtz.com
