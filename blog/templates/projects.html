@@ -6,7 +6,7 @@
         {% for post in posts %}
         <h3>{{ post }}</h3>
         {{ post.text|linebreaks }}
-        <p><a class="btn btn-primary btn-sm" href={{ post.github }}>Source Code</a></p>
+        <p><a class="btn btn-primary btn-sm" href={{ post.link }}>{{ post.link_title }}</a></p>
         <br><hr>
         {% endfor %}
     </div>

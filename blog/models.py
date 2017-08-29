@@ -17,7 +17,8 @@ class Project(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     text = models.TextField()
-    github = models.CharField(max_length=200, default="default")
+    link_title = models.CharField(max_length=200, default="Source Code")
+    link = models.CharField(max_length=200, default="default")
     created_date = models.DateTimeField(
             default=timezone.now)
 
