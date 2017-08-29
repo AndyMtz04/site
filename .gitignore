@@ -1,4 +1,5 @@
 __pycache__/
+migrations/
 *.pyo
 *.pyc
 *.log
@@ -11,4 +12,3 @@ mysite
 manage.py
 server
 docker
-
