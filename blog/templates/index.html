@@ -11,7 +11,7 @@
         {% for project in projects %}
         <div class="col-md-4">
             <h3>{{ project }}</h3>
-            <p>{{ project.text|truncatechars:250 }}</p>
+            <p>{{ project.text|truncatechars:280 }}</p>
             <a href="{{ project.link }}"><button id="btnCode" class="btn btn-primary btn-sm">{{ project.link_title }}</button></a>
         </div>
         {% endfor %}
